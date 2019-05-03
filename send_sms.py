@@ -8,7 +8,7 @@ client = Client(account_sid, auth_token)
 
 # outbound SMS (twilio->personal)
 client.messages.create(
-    to = '+15106487309',
+    to = os.environ['PHONENUMBER'],
     from_ = '+15106171282',
     body = "This is Twilio!"
     )
